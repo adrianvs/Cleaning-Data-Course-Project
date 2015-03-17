@@ -56,7 +56,8 @@ The final data frame gets aggregated, containing the the average of each variabl
 
 ###Step8
 the file finalData.txt containing the table from Step7 will be created in the currend directory.
-To read this file back into R use:
+
+###To read this file back into R use:
 *dataframe <- read.table("finalData.txt",sep=" ",header=TRUE)*
 
 
