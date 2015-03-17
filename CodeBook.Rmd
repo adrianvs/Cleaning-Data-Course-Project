@@ -2,6 +2,7 @@
 title: "Course Project Code Book"
 output: html_document
 ---
+#Course Project Code Book
 
 ##Data Source
 
@@ -13,7 +14,7 @@ A full description of the data used can be found here:
 ##Data Information
 Quote from original description:
 "The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
-Each person performed six activities (WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING)
+Each person performed six activities (*WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING*)
 wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, 
 we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. 
 The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly
@@ -23,29 +24,31 @@ See above link for more detailed information.
 
 ##Variable Information
 
+###Variables presented here:
 The observations contained in the file produced by the run_analysis.R script are the average value,
 grouped by the 30 subjects and 6 Activities of the following variables:
 (This results in 180 observations of 79 variables)
 
+###Raw variables used: 
 The estimated mean and standart deviation of the feature vector for each pattern:
 
-*tBodyAcc-XYZ
-*tGravityAcc-XYZ
-*tBodyAccJerk-XYZ
-*tBodyGyro-XYZ
-*tBodyGyroJerk-XYZ
-*tBodyAccMag
-*tGravityAccMag
-*tBodyAccJerkMag
-*tBodyGyroMag
-*tBodyGyroJerkMag
-*fBodyAcc-XYZ
-*fBodyAccJerk-XYZ
-*fBodyGyro-XYZ
-*fBodyAccMag
-*fBodyAccJerkMag
-*fBodyGyroMag
-*fBodyGyroJerkMag
+- tBodyAcc-XYZ
+- tGravityAcc-XYZ
+- tBodyAccJerk-XYZ
+- tBodyGyro-XYZ
+- tBodyGyroJerk-XYZ
+- tBodyAccMag
+- tGravityAccMag
+- tBodyAccJerkMag
+- tBodyGyroMag
+- tBodyGyroJerkMag
+- fBodyAcc-XYZ
+- fBodyAccJerk-XYZ
+- fBodyGyro-XYZ
+- fBodyAccMag
+- fBodyAccJerkMag
+- fBodyGyroMag
+- fBodyGyroJerkMag
 
 ('-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.)
 
