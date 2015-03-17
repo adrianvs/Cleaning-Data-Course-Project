@@ -1,0 +1,60 @@
+---
+title: "README"
+output: html_document
+---
+
+#Overview
+
+In this repository you will find the submission to the Getting and Cleaning Data Mooc
+by Johns Hopkins on Coursera.
+A full description of the data used can be found here:
+[UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+The complete data sets can be downloaded from
+[Cloudfront](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+
+This script will read in and modify the data. It will create a text file in your working directory
+containing a table with the average of each variable for each activity and each subject.
+For information about the variables, please see the codebook.
+
+#Prerequisites
+
+To run this script you need to download and unzipp the data sets specified above 
+and make sure your currend working directory contains those files. 
+Check your working directory with getwd().
+This script requires the dplyr package and will automatically install it from CRAN if that has not 
+already been done.
+
+#How it works
+
+###Step1
+The script will read in the test and training data sets as well as all labeling and feature data 
+using data.table(). 
+
+###Step2
+The variable names get modifyed for increased readability.
+The abbreviations are spelled out. (Time and Frequency of Body or Gravity Acceleration and Jerk)
+See Code Book for more information.
+
+###Step3
+The test and training datasets get combined with their respective subject and activity vector and
+the improved variable names name the columns of the new data frames.
+
+###Step4
+Subsets of the two dataframes get created containing only variable with "mean" or "std" in their 
+respective names. 
+
+###Step5
+The two data frames get rowbound to create the combined data frame.
+
+###Step6
+The labels of the Activity variables name get attached to the Activity variable.
+
+###Step7
+The final data frame gets aggregated, containing the the average of each variable for each activity and each subject. It therefore has 180 obeservations (30 subjects times 6 Actvities) of 79 averaged variables.
+
+###Step8
+the file finalData.txt containing the table from Step7 will be created in the currend directory.
+To read this file back into R use:
+*dataframe <- <- read.table("finalData.txt",sep=" ",header=TRUE)*
+
+
